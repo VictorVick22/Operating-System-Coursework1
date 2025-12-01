@@ -12,6 +12,9 @@ All planned configurations are documented and ready for incremental implementati
 
 References
 [1] Ubuntu Server Team, “Ubuntu Server Guide 24.04 LTS,” Canonical Ltd., 2024. [Online]. Available: https://ubuntu.com/server/docs
+
 [2] OpenSSH Project, “OpenSSH Security Best Practices,” 2024. [Online]. Available: https://www.openssh.com/security.html
+
 [3] National Institute of Standards and Technology (NIST), “Guide to General Server Security,” NIST Special Publication 800-123, Jul. 2008. [Online]. Available: https://doi.org/10.6028/NIST.SP.800-123
+
 [4] M. Abbott and M. Howard, “The STRIDE Threat Model,” Microsoft Corporation, 2006. [Online]. Available: https://learn.microsoft.com/en-us/previous-versions/commerce-server/ee823878(v=cs.20)
