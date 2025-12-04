@@ -51,21 +51,12 @@ Both virtual machines are running Ubuntu 24.04 LTS and are connected to the inte
 
 5.
 
-<img width="451" height="338" alt="w1-free(server)" src="https://github.com/user-attachments/assets/613cf8a7-d787-40a3-a944-1058495c8e59" />
-<img width="452" height="311" alt="wk1-uname(server)" src="https://github.com/user-attachments/assets/fb4c9d3c-044a-433e-9a8d-c71c18376177" />
-<img width="164" height="29" alt="wk1-lsbrelease(server)" src="https://github.com/user-attachments/assets/1e922537-b1d7-4310-b413-833006fc693e" />
-<img width="420" height="127" alt="wk1-ipaddr(server)" src="https://github.com/user-attachments/assets/1b3dafa7-397b-4afa-81e7-6c79ddd933e6" />
-<img width="238" height="68" alt="wk1-df-h(server)" src="https://github.com/user-attachments/assets/4d7b817b-a731-4bd4-a1ee-477067b638b9" />
+
+<img width="638" height="800" alt="Screenshot 2025-12-04 154722" src="https://github.com/user-attachments/assets/c0bfe3b2-ed64-49ad-9935-46be557618bc" />
+<img width="642" height="800" alt="Screenshot 2025-12-04 154622" src="https://github.com/user-attachments/assets/a734081c-d499-4693-987f-e192e7a6d510" />
+<img width="635" height="800" alt="Screenshot 2025-12-04 154600" src="https://github.com/user-attachments/assets/fe8d5a31-c42e-43fc-a830-64453274b4b6" />
 
 
 
-<img width="448" height="308" alt="week1-uname(op)" src="https://github.com/user-attachments/assets/21e59f71-5973-4ca0-b3cb-67ebbcfbcafb" />
-<img width="637" height="392" alt="week1-lsb_release(op" src="https://github.com/user-attachments/assets/f282291a-da98-40f2-8834-89cf16d08e03" />
-<img width="625" height="386" alt="week1-ipaddr(op)" src="https://github.com/user-attachments/assets/1a7486a5-e95e-4851-8956-5d0ac7d0d3a0" />
-<img width="472" height="308" alt="week1-free(op" src="https://github.com/user-attachments/assets/c8ea2aa9-c12a-4559-95e9-103198b2ccd6" />
-<img width="461" height="306" alt="week1-df-h(op)" src="https://github.com/user-attachments/assets/ff423b3b-bd35-40f3-9c97-9354133290d8" />
-
-
-
-
+<img width="640" height="797" alt="Screenshot 2025-12-04 154905" src="https://github.com/user-attachments/assets/c9350b05-e483-4767-9342-03b46ae49d67" />
 
