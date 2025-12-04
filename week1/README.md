@@ -36,10 +36,17 @@ Ubuntu in VirtualBox provides a cost-effective, isolated environment that's easy
 
 4. Network configuration documentation covering VirtualBox settings and IP addressing  
 
-VM: <img width="637" height="462" alt="Screenshot 2025-12-01 184926" src="https://github.com/user-attachments/assets/ff125d32-96d5-4dcf-a6e5-fd5bd10e3813" />
+Both virtual machines are running Ubuntu 24.04 LTS and are connected to the internet through VirtualBox NAT (Adapter 1) while communicating with each other and the host via a Host-Only network (Adapter 2 – vboxnet0). The workstation (Ubuntu Desktop) uses static IP 192.168.56.10/24 and the server (Ubuntu Server CLI) uses 192.168.56.101/24 on interface enp0s8. Netplan files (/etc/netplan/01-netcfg.yaml) were configured with DHCP on enp0s3 (NAT) for internet access and static addressing on enp0s8. Permissions were secured using chmod 600 /etc/netplan/*. Both “Cable connected” checkboxes were verified as enabled. Full bidirectional connectivity and internet access confirmed with successful pings to 8.8.8.8 and between 192.168.56.10 ↔ 192.168.56.101.
 
 
-<img width="636" height="457" alt="Screenshot 2025-12-01 185153" src="https://github.com/user-attachments/assets/9a0595d8-a939-470e-bc60-7416a16d0100" />
+<img width="647" height="650" alt="Screenshot 2025-12-04 153932" src="https://github.com/user-attachments/assets/980ad951-8f1e-4c09-ab53-27f5f07f59ec" />
+<img width="642" height="464" alt="Screenshot 2025-12-04 152600" src="https://github.com/user-attachments/assets/3357a952-7c26-4b0d-934c-e02d96512ee1" />
+<img width="638" height="800" alt="Screenshot 2025-12-04 151310" src="https://github.com/user-attachments/assets/1cf168e5-3902-4fe5-aed3-e26728addf27" />
+<img width="637" height="800" alt="Screenshot 2025-12-04 151221" src="https://github.com/user-attachments/assets/fc6fb5a5-d887-4eeb-93ec-6f46ff126d3c" />
+<img width="637" height="800" alt="Screenshot 2025-11-09 144346" src="https://github.com/user-attachments/assets/cfa44f31-de16-4ea0-b81e-c25c957fe454" />
+
+
+
 
 
 5.
