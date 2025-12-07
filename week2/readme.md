@@ -19,5 +19,7 @@ Local privilege escalation → Mitigated by minimal users, AppArmor profiles, an
 
 
 [1] Ubuntu Security Team, “SSH/OpenSSH/Configuring,” Ubuntu Documentation, 2024. [Online]. Available: https://help.ubuntu.com/community/SSH/OpenSSH/Configuring
+
 [2] Canonical Ltd., “Automatic Updates,” Ubuntu Server Guide, 2024. [Online]. Available: https://ubuntu.com/server/docs/automatic-updates
+
 [3] AppArmor Documentation Team, “AppArmor Administration,” Ubuntu, 2024. [Online]. Available: https://wiki.ubuntu.com/AppArmor
