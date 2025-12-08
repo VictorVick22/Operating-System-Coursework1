@@ -26,6 +26,7 @@ All output will be timestamped and saved using script + tee for reproducible gra
 All changes will be tested with nmap, ssh-audit, and lynis before/after.
 
 References  
-[1] Ubuntu Security Team, “SSH Hardening,” 2024. [Online].  
-[2] Canonical, “Unattended Upgrades,” Ubuntu Server Guide, 2024. [Online].  
-[3] AppArmor Documentation, 2024. [Online].
+[1]Ubuntu Wiki, “AppArmor,” Canonical, 2025. Available: https://wiki.ubuntu.com/AppArmor
+[2]Ubuntu Manpage, “ufw – Uncomplicated Firewall,” 2025. Available: https://manpages.ubuntu.com/man8/ufw.8.html
+[3]Fail2Ban Developers, “Fail2Ban Documentation,” 2025. Available: https://www.fail2ban.org/wiki/index.php/Manual
+[4]OpenSSH Project, “OpenSSH Legacy Options and Hardening Guide,” 2025. Available: https://www.openssh.com/manual.html
