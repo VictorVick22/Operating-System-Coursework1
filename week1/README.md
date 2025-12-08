@@ -5,21 +5,31 @@
 <img width="451" height="484" alt="Screenshot 2025-12-01 131803" src="https://github.com/user-attachments/assets/eca8992b-41bd-42b4-bacc-53f1c721dfd6" />
 
 
-2)Distribution Selection Justification:
+**2)Distribution Selection Justification:**
 
-For the server distribution, I selected Ubuntu 24.04.3 LTS (Long Term Support). This choice was made after comparing it with several alternatives, focusing on factors like stability, ease of management, community support, package availability, and suitability for a server environment with SSH access.
-Ubuntu 24.04.3 LTS vs. Alternatives:
-Debian 12 (Bookworm): Debian is known for extreme stability, as it's the base for Ubuntu. However, its release cycle is slower, meaning packages are older (e.g., Python 3.11 in Debian vs. 3.12 in Ubuntu 24.04). Ubuntu provides a good balance with fresher software while maintaining LTS stability (5 years of support until 2029). Debian might be better for ultra-conservative environments, but Ubuntu's larger community and easier package management (via apt) make it more practical for deployment and troubleshooting.
-Fedora Server 40: Fedora offers cutting-edge features and is sponsored by Red Hat, making it great for testing new technologies. However, its short support cycle (about 13 months) contrasts with Ubuntu's LTS, which is preferable for a stable server setup to avoid frequent upgrades. Fedora uses DNF for packages, which is similar to apt but less ubiquitous in tutorials/documentation compared to Ubuntu.
+I chose Ubuntu 24.04.3 LTS Server for my server VM. Here’s why it was the best option for me:
+I looked at three main alternatives:
 
-Justification Summary: Ubuntu 24.04.3 LTS was chosen for its optimal blend of stability, up-to-date packages, extensive documentation, and large community support. It's particularly well-suited for an SSH server due to straightforward configuration, regular security updates, and compatibility with VirtualBox. Alternatives like Debian or CentOS are more rigid for production, while Fedora is too volatile for long-term use.
+Debian 12 – Super stable, but packages are quite old (for example, it still ships Python 3.11 while Ubuntu 24.04 already has 3.12). Updates come very slowly, and for a school lab I prefer slightly newer software without losing reliability.
+Fedora Server 40 – Has the newest features and is backed by Red Hat, but support lasts only about one year. That means I would have to reinstall or upgrade the whole server every year, which is too much work for this project.
+Rocky Linux / AlmaLinux – Very good for real production servers, but they use DNF and the whole RHEL way of doing things. I’m much more comfortable with Ubuntu’s apt and the huge amount of Ubuntu-specific tutorials online.
+
+Ubuntu 24.04 LTS gives me exactly what I need:
+
+5 years of free updates (until 2029)
+Fresh but still well-tested packages
+The biggest community, so any problem I hit has a solution in minutes
+Super simple SSH and VirtualBox Guest Additions setup
+Easy one-command security updates and tools like UFW and AppArmor
+
+Because of these reasons, Ubuntu 24.04.3 LTS Server was clearly the best choice for a fast, reliable, and easy-to-manage lab server with SSH access.
 
 
 
 
 
 
-3)Workstation Configuration Decision
+**3)Workstation Configuration Decision**
 
 For the workstation, I chose Ubuntu 24.04.3 LTS running in VirtualBox. This decision aligns with the server distribution for consistency, simplifying management and reducing compatibility issues (e.g., shared tooling and commands).
 
@@ -34,7 +44,7 @@ Ubuntu in VirtualBox provides a cost-effective, isolated environment that's easy
 
 
 
-4. Network configuration documentation covering VirtualBox settings and IP addressing  
+**4. Network configuration documentation covering VirtualBox settings and IP addressing** 
 
 Both virtual machines are running Ubuntu 24.04 LTS and are connected to the internet through VirtualBox NAT (Adapter 1) while communicating with each other and the host via a Host-Only network (Adapter 2 – vboxnet0). The workstation (Ubuntu Desktop) uses static IP 192.168.56.10/24 and the server (Ubuntu Server CLI) uses 192.168.56.101/24 on interface enp0s8. Netplan files (/etc/netplan/01-netcfg.yaml) were configured with DHCP on enp0s3 (NAT) for internet access and static addressing on enp0s8. Permissions were secured using chmod 600 /etc/netplan/*. Both “Cable connected” checkboxes were verified as enabled. Full bidirectional connectivity and internet access confirmed with successful pings to 8.8.8.8 and between 192.168.56.10 ↔ 192.168.56.101.
 
@@ -45,11 +55,13 @@ Both virtual machines are running Ubuntu 24.04 LTS and are connected to the inte
 <img width="637" height="800" alt="Screenshot 2025-12-04 151221" src="https://github.com/user-attachments/assets/fc6fb5a5-d887-4eeb-93ec-6f46ff126d3c" />
 <img width="637" height="800" alt="Screenshot 2025-11-09 144346" src="https://github.com/user-attachments/assets/cfa44f31-de16-4ea0-b81e-c25c957fe454" />
 
+<img width="1264" height="793" alt="Screenshot 2025-12-04 164244" src="https://github.com/user-attachments/assets/be4c25ac-6185-4493-841a-1b683f2f882d" />
 
 
 
 
-5.
+**5.Using a CLI, document system specifications using `uname`, `free`, `df -h`, `ip addr`, and 
+`lsb_release`**
 
 
 <img width="638" height="800" alt="Screenshot 2025-12-04 154722" src="https://github.com/user-attachments/assets/c0bfe3b2-ed64-49ad-9935-46be557618bc" />
