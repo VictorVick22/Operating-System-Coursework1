@@ -1,25 +1,31 @@
 Phase 2: Security Planning and Testing Methodology (Week 2)
 
-1. Performance Testing Plan
-I will monitor the server remotely from the workstation (192.168.56.10) using SSH. Tools used: htop, iotop, nload, vmstat, and sar (from sysstat). Baseline will be recorded with an idle system, then repeated under load using stress-ng --cpu 4 --io 2 --vm 2 --timeout 300s. All results will be saved with timestamps and screenshots for comparison before/after hardening.
-2. Security Configuration Checklist
+**1. Performance Testing Plan (Remote Monitoring)**
+All monitoring and testing will be performed remotely from the workstation (192.168.56.10) over SSH.  
+Tools used: htop, vmstat, iostat, nethogs, sar (sysstat), and dstat.  
+Baseline measurements will be taken on an idle system, unhardened server.  
+Each hardening step will be applied one-by-one, and the same tests repeated to measure performance impact.  
+Load will be generated with stress-ng (CPU, memory, I/O) and iperf3 (network).  
+Minecraft PaperMC server will be used as real-world mixed workload.  
+All output will be timestamped and saved using script + tee for reproducible graphs.
 
-SSH Hardening: Disable root login (PermitRootLogin no), password authentication (PasswordAuthentication no), use key-only, change port to 2222, limit to user vick.
-Firewall (UFW): Enable UFW, allow only SSH (port 2222) from 192.168.56.10, deny everything else.
-Automatic Updates: Install unattended-upgrades, configure auto security updates.
-User Privileges: Only one admin user (vick) in sudo group, no unnecessary users.
-Mandatory Access Control: Install and enable AppArmor (aa-enforce /etc/apparmor.d/*).
-Network Security: Disable IPv6, ensure no open ports except 2222.
+**2. Security Configuration Checklist**
+- SSH: Port 2222, key-only authentication, disable root login, disable password auth, Fail2Ban installed
+- Firewall (UFW): Default deny, allow only port 2222 from 192.168.56.10
+- Automatic security updates: unattended-upgrades configured for security only
+- User management: Only user “vick” with sudo rights, no other accounts
+- Mandatory Access Control: AppArmor in enforce mode for all profiles (sshd, java, etc.)
+- Disable IPv6 in sysctl
+- Regular apt autoremove & log monitoring with logwatch
 
-3. Threat Model (Top 3 Threats)
+**3. Threat Model (Top 3)**
+1. Remote brute-force → mitigated by key-only + non-standard port + Fail2Ban  
+2. Zero-day vulnerabilities → mitigated by automatic security updates  
+3. Local privilege escalation → mitigated by minimal users + AppArmor confinement
 
-Brute-force SSH attack → Mitigated by key-only auth + Fail2Ban + non-standard port.
-Unpatched vulnerabilities → Mitigated by unattended-upgrades and weekly manual checks.
-Local privilege escalation → Mitigated by minimal users, AppArmor profiles, and regular apt update && apt upgrade.
+All changes will be tested with nmap, ssh-audit, and lynis before/after.
 
-
-[1] Ubuntu Security Team, “SSH/OpenSSH/Configuring,” Ubuntu Documentation, 2024. [Online]. Available: https://help.ubuntu.com/community/SSH/OpenSSH/Configuring
-
-[2] Canonical Ltd., “Automatic Updates,” Ubuntu Server Guide, 2024. [Online]. Available: https://ubuntu.com/server/docs/automatic-updates
-
-[3] AppArmor Documentation Team, “AppArmor Administration,” Ubuntu, 2024. [Online]. Available: https://wiki.ubuntu.com/AppArmor
+References  
+[1] Ubuntu Security Team, “SSH Hardening,” 2024. [Online].  
+[2] Canonical, “Unattended Upgrades,” Ubuntu Server Guide, 2024. [Online].  
+[3] AppArmor Documentation, 2024. [Online].
