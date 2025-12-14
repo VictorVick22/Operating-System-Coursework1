@@ -10,7 +10,7 @@
 I chose Ubuntu 24.04.3 LTS Server for my server VM. Here’s why it was the best option for me:
 I looked at three main alternatives:
 
-Debian 12 – Super stable, but packages are quite old (for example, it still ships Python 3.11 while Ubuntu 24.04 already has 3.12). Updates come very slowly, and for a school lab I prefer slightly newer software without losing reliability.
+Debian 12 – Super stable, but packages are quite old. Updates come very slowly, and for a school lab I prefer slightly newer software without losing reliability.
 Fedora Server 40 – Has the newest features and is backed by Red Hat, but support lasts only about one year. That means I would have to reinstall or upgrade the whole server every year, which is too much work for this project.
 Rocky Linux / AlmaLinux – Very good for real production servers, but they use DNF and the whole RHEL way of doing things. I’m much more comfortable with Ubuntu’s apt and the huge amount of Ubuntu-specific tutorials online.
 
@@ -31,7 +31,7 @@ Because of these reasons, Ubuntu 24.04.3 LTS Server was clearly the best choice 
 
 **3)Workstation Configuration Decision**
 
-For the workstation, I chose Ubuntu 24.04.3 LTS running in VirtualBox. This decision aligns with the server distribution for consistency, simplifying management and reducing compatibility issues (e.g., shared tooling and commands).
+For the workstation, I chose Ubuntu 24.04.3 LTS running in VirtualBox. This decision aligns with the server distribution for consistency, simplifying management and reducing compatibility issues
 
 Justification of Workstation Option:
 Options Considered:
